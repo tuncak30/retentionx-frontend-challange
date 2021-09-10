@@ -1,0 +1,148 @@
+$pink: rgb(255, 5, 96);
+$purple: rgb(46, 41, 78);
+$light-gray: #fefcfd;
+$main-text-color: #404040;
+
+
+body{
+  font-weight: 300;
+  color: $main-text-color;
+  background-color: $light-gray;
+  box-sizing: border-box;
+}
+
+#spinner-glass{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: rgba(255,255,255,0.8);
+  #spinner-center-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translateY(-50%) translateX(-50%);
+    img{
+      max-width: 150px;
+    }
+    p{
+      font-size: 22px;
+      font-weight: 300;
+    }
+  }
+}
+
+.section-titles{
+  border-bottom: 1px solid $purple;
+  color: transparent;
+  background-image: linear-gradient(90deg, $purple,#544A92FF);
+  background-clip: text;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fruit-cards{
+  background-color: #fff;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  transition: all 200ms ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+  margin: 20px 0px;
+  .custom-btn{
+    border-color: $pink;
+    color: $pink;
+    font-size: 13px;
+    font-weight: 300;
+    &:hover{
+      background-color: rgba(255,7,97,.03);
+    }
+    &:active, &:focus{
+      box-shadow: none;
+      outline: none;
+    }
+  }
+  &:hover{
+    transform: scale(1.03,1.03);
+  }
+  .fruit-card-body{
+    padding: 0px 20px 20px 20px;
+    .nutrition-icons{
+      width: 20px;
+      display: inline-block;
+      margin-right: 5px;
+    }
+    .fruit-name{
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 16px;
+      color: transparent;
+      background-image: linear-gradient(90deg, $pink,#c3235d);
+      background-clip: text;
+    }
+    .nutrition-container{
+      border-radius: 5px;
+      padding: 5px;
+      transition: all 200ms ease-out;
+      &:hover{
+        background-color: #efefef;
+      }
+      .nutrition-fact-header{
+        font-size: 16px;
+        margin-bottom: 0px;
+      }
+      .nutrition-facts{
+        font-size: 16px;
+        margin-top: 5px;
+      }
+    }
+  }
+  .fruit-photo{
+    max-height: 180px;
+    overflow: hidden;
+    img{
+      width: 100%;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+  }
+}
+
+.recharts-wrapper{
+  width: 100%;
+}
+
+body.dark{
+  #spinner-glass{
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+  }
+  background-color: #404040;
+  .modal-content{
+    background-color: #272727;
+    color: #fff;
+  }
+  .section-titles{
+    color: transparent;
+    background-image: linear-gradient(90deg, $pink, #c3235d);
+    border-bottom: 1px solid $pink;
+    -webkit-background-clip: text;
+
+  }
+  .fruit-cards{
+    border-color: black;
+    background-color: #272727;
+    color: #fff;
+    .nutrition-container{
+      &:hover{
+        background-color: black;
+      }
+    }
+  }
+}
+
