@@ -43,6 +43,7 @@ function App() {
   }
 
   useEffect(() => {
+      //fetch('https://cors-anywhere.herokuapp.com/https://www.fruityvice.com/api/fruit/all')
       fetch('https://www.fruityvice.com/api/fruit/all')
           .then(response => response.json())
           .then(data => {
@@ -130,7 +131,7 @@ function App() {
                                   </Col>
                               </>
                               :
-                              fruits.map((fruit, index) =>
+                              fruits.map((fruit) =>
                                   <Col xl={3} lg={4} md={6} sm={6} xs={12} key={fruit.id}>
                                       {
                                           <FruitCards
@@ -153,7 +154,7 @@ function App() {
                               }, 100)
                           }}>
                               {
-                                  filterKeys.map((key, index) => <option key={key} value={key}>{upperCaseFirstLetter(key)}</option>)
+                                  filterKeys.map((key) => <option key={key} value={key}>{upperCaseFirstLetter(key)}</option>)
                               }
                           </Form.Select>
                       </h1>
