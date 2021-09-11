@@ -11,7 +11,7 @@
     - **Pexel image search**
     - **https://api.spoonacular.com**
 
-- Although it is free, fruityvice API does not allow cross domain requests from https://localhost:3000. Therefore I used https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc (Moesif CORS) while developing this challenge. Or you can use https://cors-anywhere.herokuapp.com while fetching data (I commented that line out)
+- Although it is free, fruityvice API does not allow cross domain requests from https://localhost:3000. Therefore I used https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc (Moesif CORS Chrome Extension) while developing this challenge. Or you can use https://cors-anywhere.herokuapp.com while fetching data (I commented that line out)
 - Pexel image search limits their API by 200 calls per hour. Since we retreive 20+ images on one go, it might exceed its limit pretty fast.
 
 ### File Structure
