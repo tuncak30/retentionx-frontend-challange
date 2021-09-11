@@ -18,11 +18,11 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(localStorage.getItem('theme') === 'dark' ? true : false);
   const [modal, showModal] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const client = createClient('563492ad6f917000010000012c46dce6244646baabf0e9d6e9f19fcfd');
   const handleClose = () => {
       showModal(false);
   }
 
-    const client = createClient('563492ad6f917000010000012c46dce6244646baabf0e9d6e9f19fcfdxxx');
     function sortArrayForChart( a, b ) {
         if ( a.nutritions[sortKey] < b.nutritions[sortKey] ){
             return -1;
@@ -46,7 +46,7 @@ function App() {
       fetch('https://www.fruityvice.com/api/fruit/all')
           .then(response => response.json())
           .then(data => {
-              /*async function getFruitImage() {
+              async function getFruitImage() {
                   for (let i=0; i<data.length; i++){
                       let query = data[i].name;
                       let src = await client.photos.search({ query, per_page: 1, orientation: 'landscape' }).then(photos => {
@@ -62,10 +62,7 @@ function App() {
                   setFilterKeys(Object.keys(data[0].nutritions));
                   setFruits(data);
               }
-              getFruitImage();*/
-              setLoading(false);
-              setFilterKeys(Object.keys(data[0].nutritions));
-              setFruits(data);
+              getFruitImage();
           })
           .catch((error) => {
               setErrorMessage(error.toString());

@@ -1,4 +1,4 @@
-import {Button, Col, Row} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 import Skeleton from 'react-loading-skeleton';
 
 function SkeletonPlaceholder(){
